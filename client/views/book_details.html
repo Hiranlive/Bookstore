@@ -1,0 +1,58 @@
+<div class="text-right">
+	<a href="#!/books" class="btn btn-success">Go back</a>
+	<br/><br/>
+</div>
+
+<div class="jumbotron" ng-init="getBook()">
+	<h4>{{book.title}}</h4>
+	<p>
+		{{book.description}}
+	</p>
+
+	<div class="row text-center">
+		<div class="col-sm-4 col-sm-offset-4">
+			<img class="thumbnail image" src="{{book.image_url}}">
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th>Property</th>
+				<th>Value</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Genre</td>
+				<td>{{book.genre}}</td>
+			</tr>
+			<tr>
+				<td>Author</td>
+				<td>{{book.author}}</td>
+			</tr>
+			<tr>
+				<td>Publisher</td>
+				<td>{{book.publisher}}</td>
+			</tr>
+			<tr>
+				<td>Pages</td>
+				<td>{{book.pages}}</td>
+			</tr>
+			<tr>
+				<td>Create Date</td>
+				<td>{{book.create_date}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<div class="row pull-right">
+	<a href="#!/books/edit/{{book._id}}">Edit Book</a>
+
+	|
+
+	<a href="#" ng-click="removeBook(book._id)">Delete</a>
+</div>
